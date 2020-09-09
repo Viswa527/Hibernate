@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping> 
+   <class name="com.packageThree.Merchant" table="merchant_OM">  
+		<id name="merchantId" column="merchid"  />
+			<property name="merchantName" column="merchname" length="10"/>
+			<set name="children" cascade="all" >
+     		 	<key column="forevenid" />
+      			<one-to-many class="com.packageThree.Customer" />
+			</set>
+    </class> 
+</hibernate-mapping>
