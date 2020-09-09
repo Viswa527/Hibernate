@@ -43,6 +43,7 @@ public class Testing {
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml"); 
 		
+		@SuppressWarnings("deprecation")
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();		
 		
