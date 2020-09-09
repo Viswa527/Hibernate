@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.packageTwo.Address" table="address">
+		<id name="addressId" column="addressid" >
+			<generator class="foreign">
+					<param name="property">s</param>
+			</generator>
+		</id>
+		<property name="city" column="city" length="10"/>
+		<property name="state" column="state" length="10"/>
+		<one-to-one name="s" class="com.packageTwo.Student" cascade="all" />
+
+	</class>
+</hibernate-mapping>
