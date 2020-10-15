@@ -19,7 +19,7 @@ public class Testing {
 		SessionFactory factory = configure.buildSessionFactory();
 		Session session = factory.openSession();
 		session.beginTransaction();
-		session=addCustomerToMerchantInOneToMany(session,112, "Ravi",45);
+		session=addCustomerToMerchantInOneToMany(session,786, "ViswaMahi",45);
 		session.getTransaction().commit();
         System.out.println("Done");
 		           

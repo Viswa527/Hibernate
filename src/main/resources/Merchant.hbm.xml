@@ -7,7 +7,7 @@
    <class name="com.packageThree.Merchant" table="merchant_OM">  
 		<id name="merchantId" column="merchid"  />
 			<property name="merchantName" column="merchname" length="10"/>
-			<set name="children" cascade="all" >
+			<set name="children">
      		 	<key column="forevenid" />
       			<one-to-many class="com.packageThree.Customer" />
 			</set>
